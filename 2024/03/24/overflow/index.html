@@ -9,12 +9,12 @@
   
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="猫猫式 mirai 实现于 Onebot 11。让 mirai 框架加入 Onebot 大家庭!  前言OverflowOverflow 是 mirai-core-api 的实现，该项目因腾讯官方持续更新签名算法打击机器人社区而产生，产生目的是扩展 mirai 的可用范围，当实在没有人更新 mirai-core 的协议实现时，可使用本项目将 mirai 接口嫁接到 Onebot 实现上，以实现快速">
+  <meta name="description" content="猫猫式 mirai 实现于 Onebot 11。让 mirai 框架加入 Onebot 大家庭!       前言OverflowOverflow 是 mirai-core-api 的实现，该项目因腾讯官方持续更新签名算法打击机器人社区而产生，产生目的是扩展 mirai 的可用范围，当实在没有人更新 mirai-core 的协议实现时，可使用本项目将 mirai 接口嫁接到 Onebot 实现上，">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Overflow 溢出核心——基于LLOneBot实现与部署">
 <meta property="og:url" content="http://example.com/2024/03/24/overflow/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="猫猫式 mirai 实现于 Onebot 11。让 mirai 框架加入 Onebot 大家庭!  前言OverflowOverflow 是 mirai-core-api 的实现，该项目因腾讯官方持续更新签名算法打击机器人社区而产生，产生目的是扩展 mirai 的可用范围，当实在没有人更新 mirai-core 的协议实现时，可使用本项目将 mirai 接口嫁接到 Onebot 实现上，以实现快速">
+<meta property="og:description" content="猫猫式 mirai 实现于 Onebot 11。让 mirai 框架加入 Onebot 大家庭!       前言OverflowOverflow 是 mirai-core-api 的实现，该项目因腾讯官方持续更新签名算法打击机器人社区而产生，产生目的是扩展 mirai 的可用范围，当实在没有人更新 mirai-core 的协议实现时，可使用本项目将 mirai 接口嫁接到 Onebot 实现上，">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/images/qqnt.png">
 <meta property="og:image" content="http://example.com/images/%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85%E8%84%9A%E6%9C%AC.png">
@@ -35,8 +35,9 @@
 <meta property="og:image" content="http://example.com/images/websocket6.png">
 <meta property="og:image" content="http://example.com/images/websocket7.png">
 <meta property="og:image" content="http://example.com/images/websocket8.png">
+<meta property="og:image" content="http://example.com/images/%E5%B0%8F%E5%A4%8F.png">
 <meta property="article:published_time" content="2024-03-24T15:13:19.412Z">
-<meta property="article:modified_time" content="2024-03-24T15:23:27.413Z">
+<meta property="article:modified_time" content="2024-03-25T05:14:50.405Z">
 <meta property="article:author" content="Nuist666">
 <meta property="article:tag" content="Overflow,Mirai,LLOneBot,OneBot">
 <meta name="twitter:card" content="summary">
@@ -232,28 +233,38 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>猫猫式 mirai 实现于 Onebot 11。<br>让 mirai 框架加入 Onebot 大家庭!</p>
+<div align="center">
+<img src=/images/茜.ico alt="茜">
+</div>
+
+
 <hr>
 <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><h3 id="Overflow"><a href="#Overflow" class="headerlink" title="Overflow"></a>Overflow</h3><p><a target="_blank" rel="noopener" href="https://mirai.mrxiaom.top/">Overflow</a> 是 <a target="_blank" rel="noopener" href="https://github.com/mamoe/mirai/tree/dev/mirai-core-api">mirai-core-api</a> 的实现，该项目因腾讯官方持续更新签名算法打击机器人社区而产生，产生目的是扩展 mirai 的可用范围，当实在没有人更新 mirai-core 的协议实现时，可使用本项目将 mirai 接口嫁接到 Onebot 实现上，以实现快速迁移，而无需修改原有业务代码。</p>
 <h3 id="LiteLoaderQQNT"><a href="#LiteLoaderQQNT" class="headerlink" title="LiteLoaderQQNT"></a>LiteLoaderQQNT</h3><p><a target="_blank" rel="noopener" href="https://liteloaderqqnt.github.io/">LiteLoaderQQNT</a> 是 QQNT 的插件加载器，一般在 QQNT 的环境内简称为 LiteLoader。它可以让你自由地为 QQNT 添加各种插件，并实现例如美化主题、增加功能等各种功能。</p>
 <h3 id="LLOneBot-API"><a href="#LLOneBot-API" class="headerlink" title="LLOneBot API"></a>LLOneBot API</h3><p><a target="_blank" rel="noopener" href="https://llonebot.github.io/zh-CN/">LLOneBot API</a>是LiteLoaderQQNT的一个插件，使你的NTQQ支持OneBot11协议进行QQ机器人开发。</p>
 <h1 id="快速开始"><a href="#快速开始" class="headerlink" title="快速开始"></a>快速开始</h1><p>本人部署在Windows端，其他操作系统部署方法类似。</p>
-<h2 id="一、安装QQNT"><a href="#一、安装QQNT" class="headerlink" title="一、安装QQNT"></a>一、安装QQNT</h2><p>进入QQ PC版官方网站，选择全新版本下载并安装。<br><img src="/images/qqnt.png" alt="QQNT"></p>
-<h2 id="二、安装LiteLoaderQQNT"><a href="#二、安装LiteLoaderQQNT" class="headerlink" title="二、安装LiteLoaderQQNT"></a>二、安装LiteLoaderQQNT</h2><p>注意在安装之前请先关闭 QQ ！</p>
-<p>推荐使用<a target="_blank" rel="noopener" href="https://github.com/Mzdyl/LiteLoaderQQNT_Install/releases">一键安装脚本</a>，支持 Windows、Linux、MacOS.<br>手动安装见<a target="_blank" rel="noopener" href="https://liteloaderqqnt.github.io/guide/install.html">LiteLoaderQQNT文档</a><br>注：一键安装脚本请以管理员身份运行，运行成功结果如下：<br><img src="/images/%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85%E8%84%9A%E6%9C%AC.png" alt="一键安装脚本"></p>
+<h2 id="一、安装QQNT"><a href="#一、安装QQNT" class="headerlink" title="一、安装QQNT"></a>一、安装QQNT</h2><p>进入QQ PC版官方网站，选择全新版本下载并安装。<br><img src="/images/qqnt.png" alt="QQNT"><br>注意：<strong>强烈建议使用小号！</strong></p>
+<h2 id="二、安装LiteLoaderQQNT"><a href="#二、安装LiteLoaderQQNT" class="headerlink" title="二、安装LiteLoaderQQNT"></a>二、安装LiteLoaderQQNT</h2><p>注意在安装之前请先关闭 QQ ！<br>推荐使用<a target="_blank" rel="noopener" href="https://github.com/Mzdyl/LiteLoaderQQNT_Install/releases">一键安装脚本</a>，支持 Windows、Linux、MacOS.<br>手动安装见<a target="_blank" rel="noopener" href="https://liteloaderqqnt.github.io/guide/install.html">LiteLoaderQQNT文档</a><br>注：一键安装脚本请以管理员身份运行，运行成功结果如下：<br><img src="/images/%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85%E8%84%9A%E6%9C%AC.png" alt="一键安装脚本"></p>
 <p>安装成功后打开QQ的设置，看到了 LiteLoaderQQNT 就代表安装成功了.<br><img src="/images/LiteLoaderQQNT.png" alt="LiteLoaderQQNT"></p>
 <h2 id="三、安装LLOneBot"><a href="#三、安装LLOneBot" class="headerlink" title="三、安装LLOneBot"></a>三、安装LLOneBot</h2><p>下载<a target="_blank" rel="noopener" href="https://github.com/LLOneBot/LLOneBot/releases">LLOneBot</a> 最新版本 解压放到 plugins 目录下，然后重启 QQ 即可.<br>注：plugins 目录可以在 LiteLoaderQQNT 的页面找到并一键打开.<br><img src="/images/plugins%E7%9B%AE%E5%BD%951.png" alt="plugins目录1"><br><img src="/images/plugins%E7%9B%AE%E5%BD%952.png" alt="plugins目录2"><br><img src="/images/plugins%E7%9B%AE%E5%BD%953.png" alt="plugins目录3"><br>目录结构如下：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">├── plugins</span><br><span class="line">│   ├── LLOneBot</span><br><span class="line">│   │   └── main/main.cjs</span><br><span class="line">│   │   └── preload/preload.cjs</span><br><span class="line">│   │   └── renderer/index.js</span><br><span class="line">│   │   └── manifest.json</span><br><span class="line">│   │   └── node_modules/...</span><br></pre></td></tr></table></figure>
 
-<p>重启QQ后检查是否安装成功<br><img src="/images/LLOneBot1.png" alt="LLOneBot"></p>
+<p>重启QQ后检查是否安装成功<br><img src="/images/LLOneBot1.png" alt="LLOneBot"><br>至此OneBot部署完毕。</p>
 <h2 id="四、下载-Overflow-mirai-console-整合包"><a href="#四、下载-Overflow-mirai-console-整合包" class="headerlink" title="四、下载 Overflow + mirai-console 整合包"></a>四、下载 Overflow + mirai-console 整合包</h2><p>进入<a target="_blank" rel="noopener" href="https://mirai.mrxiaom.top/#get-started">Overflow官网</a>，根据自己的网络环境选择下载源，然后点击刷新版本。选择最新overflow版本后点击下载。<br><img src="/images/overflow1.png" alt="overflow1"><br>(补充：如果版本加载不出来，可以使用<a target="_blank" rel="noopener" href="https://mirai.mrxiaom.top/docs/install/MCLOverflow.html">已修改的MCL安装</a>。)<br>下载后解压并运行start.bat<br><img src="/images/overflow2.png" alt="overflow2"><br>出现下图即可关闭<br><img src="/images/overflow3.png" alt="overflow3"><br>文件夹内生成配置文件。打开配置文件 <code>overflow.json</code> 以备用。<br><img src="/images/overflow4.png" alt="overflow4"></p>
-<h2 id="五、OneBot对接配置"><a href="#五、OneBot对接配置" class="headerlink" title="五、OneBot对接配置"></a>五、OneBot对接配置</h2><p>Onebot 实现部署完成后，取得其 正向 WebSocket 地址 或 反向 WebSocket 地址，任选其一填入配置文件中，再次启动即可。</p>
+<h2 id="五、OneBot对接配置"><a href="#五、OneBot对接配置" class="headerlink" title="五、OneBot对接配置"></a>五、OneBot对接配置</h2><p>Onebot 实现部署完成后，取得其 <strong>正向 WebSocket 地址</strong> 或 <strong>反向 WebSocket 地址</strong>，任选其一填入配置文件中，再次启动即可。</p>
 <h3 id="1-正向WebSocket"><a href="#1-正向WebSocket" class="headerlink" title="1.正向WebSocket"></a>1.正向WebSocket</h3><p>用于接受应用端的正向WS连接。即让 Overflow 去连接 Onebot 协议实现。<br>如正向 ws 绑定的端口为 3001<br>需要在应用端配置的WS地址为 ws:&#x2F;&#x2F;localhost:3001<br><img src="/images/websocket1.png" alt="websocket1"></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;ws_host&quot;: &quot;ws://localhost:3001&quot;,</span><br><span class="line">    &quot;reversed_ws_port&quot;: -1,</span><br><span class="line">    &quot;token&quot;: &quot;&quot;,</span><br><span class="line">    &quot;no_platform&quot;: false,</span><br><span class="line">    &quot;retry_times&quot;: 5,</span><br><span class="line">    &quot;retry_wait_mills&quot;: 5000,</span><br><span class="line">    &quot;retry_rest_mills&quot;: 60000</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><img src="/images/websocket2.png" alt="websocket2"><br>运行start.bat,出现<code>已连接到服务器</code>字样即可。<br><img src="/images/websocket3.png" alt="websocket3"></p>
+<p><img src="/images/websocket2.png" alt="websocket2"><br>点击保存后运行start.bat,出现<code>已连接到服务器</code>字样即可。<br><img src="/images/websocket3.png" alt="websocket3"></p>
 <h3 id="2-反向WebSocket"><a href="#2-反向WebSocket" class="headerlink" title="2.反向WebSocket"></a>2.反向WebSocket</h3><p>用于LLOneBot主动连接应用端绑定的反向WS地址<br>如在 overflow 配置了 onebot 的端口为 3002<br>那么在 LLOneBot 配置的反向WS地址为 ws:&#x2F;&#x2F;localhost:3002<br><img src="/images/websocket4.png" alt="websocket4"></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;ws_host&quot;: &quot;ws://localhost:3001&quot;,</span><br><span class="line">    &quot;reversed_ws_port&quot;: 3002,</span><br><span class="line">    &quot;token&quot;: &quot;&quot;,</span><br><span class="line">    &quot;no_platform&quot;: false,</span><br><span class="line">    &quot;retry_times&quot;: 5,</span><br><span class="line">    &quot;retry_wait_mills&quot;: 5000,</span><br><span class="line">    &quot;retry_rest_mills&quot;: 60000</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><img src="/images/websocket5.png" alt="websocket5"><br>点击保存后运行start.bat，出现<code>反向WebSocket客户端已连接</code>字样即可<br><img src="/images/websocket6.png" alt="websocket6"><br>可选：鉴权令牌，可自定义<br><img src="/images/websocket7.png" alt="websocket7"><br><img src="/images/websocket8.png" alt="websocket8"></p>
-<h2 id="六、总结"><a href="#六、总结" class="headerlink" title="六、总结"></a>六、总结</h2><p>以上将 mirai 接口嫁接到 Onebot 实现上，以实现快速迁移，而无需修改原有业务代码。<br>Mirai社区：<a target="_blank" rel="noopener" href="https://mirai.mamoe.net/">https://mirai.mamoe.net/</a><br>Overflow项目地址：<a target="_blank" rel="noopener" href="https://github.com/MrXiaoM/Overflow">https://github.com/MrXiaoM/Overflow</a><br>LiteLoaderQQNT项目地址：<a target="_blank" rel="noopener" href="https://github.com/LiteLoaderQQNT/LiteLoaderQQNT">https://github.com/LiteLoaderQQNT/LiteLoaderQQNT</a><br>LLOneBot项目地址：<a target="_blank" rel="noopener" href="https://github.com/LLOneBot/LLOneBot">https://github.com/LLOneBot/LLOneBot</a></p>
+<h2 id="六、总结"><a href="#六、总结" class="headerlink" title="六、总结"></a>六、总结</h2><p>以上将 mirai 接口嫁接到 Onebot 实现上，以实现快速迁移，而无需修改原有业务代码。</p>
+<h3 id="友情链接"><a href="#友情链接" class="headerlink" title="友情链接"></a>友情链接</h3><p>Mirai社区：<a target="_blank" rel="noopener" href="https://mirai.mamoe.net/">https://mirai.mamoe.net/</a><br>Overflow项目地址：<a target="_blank" rel="noopener" href="https://github.com/MrXiaoM/Overflow">https://github.com/MrXiaoM/Overflow</a><br>LiteLoaderQQNT项目地址：<a target="_blank" rel="noopener" href="https://github.com/LiteLoaderQQNT/LiteLoaderQQNT">https://github.com/LiteLoaderQQNT/LiteLoaderQQNT</a><br>LLOneBot项目地址：<a target="_blank" rel="noopener" href="https://github.com/LLOneBot/LLOneBot">https://github.com/LLOneBot/LLOneBot</a></p>
+<h3 id="本人曾用的mirai插件及HTTP-API："><a href="#本人曾用的mirai插件及HTTP-API：" class="headerlink" title="本人曾用的mirai插件及HTTP API："></a>本人曾用的mirai插件及HTTP API：</h3><p>ChatGPT 项目地址：<a target="_blank" rel="noopener" href="https://github.com/lss233/chatgpt-mirai-qq-bot">https://github.com/lss233/chatgpt-mirai-qq-bot</a><br>B站动态推送 项目地址：<a target="_blank" rel="noopener" href="https://github.com/Colter23/bilibili-dynamic-mirai-plugin">https://github.com/Colter23/bilibili-dynamic-mirai-plugin</a><br>蔚蓝档案攻略活动推送 项目地址：<a target="_blank" rel="noopener" href="https://github.com/diyigemt/arona">https://github.com/diyigemt/arona</a><br>ChatLearning 项目地址：<a target="_blank" rel="noopener" href="https://github.com/JHue58/ChatLearning">https://github.com/JHue58/ChatLearning</a></p>
+<center>  
+    <img src="/images/小夏.png"  alt="小夏">
+</center>
+
 
       
     </div>
