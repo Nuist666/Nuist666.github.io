@@ -242,7 +242,13 @@
 
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">model.<span class="built_in">eval</span>() <span class="comment"># 将模型设置为运行模式</span></span><br><span class="line">test_loss = <span class="number">0</span></span><br><span class="line">correct = <span class="number">0</span></span><br><span class="line"><span class="keyword">with</span> torch.no_grad():</span><br><span class="line">   <span class="keyword">for</span> data, target <span class="keyword">in</span> test_loader:</span><br><span class="line">      output = model(data)</span><br><span class="line">      test_loss = test_loss + F.nll_loss(output, target, reduction=<span class="string">&#x27;sum&#x27;</span>).item()</span><br><span class="line">      pred = output.argmax(dim=<span class="number">1</span>, keepdim=<span class="literal">True</span>)</span><br><span class="line">      correct = correct + pred.eq(target.view_as(pred)).<span class="built_in">sum</span>().item()</span><br><span class="line"></span><br><span class="line">test_loss = test_loss / <span class="built_in">len</span>(test_loader.dataset)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;\nTest set: Average loss: &#123;:.4f&#125;, Accuracy: &#123;&#125;/&#123;&#125; (&#123;:.0f&#125;%)\n&#x27;</span>.<span class="built_in">format</span>(</span><br><span class="line">   test_loss, correct, <span class="built_in">len</span>(test_loader.dataset),</span><br><span class="line">   <span class="number">100.</span> * correct / <span class="built_in">len</span>(test_loader.dataset)))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
+<script src="https://utteranc.es/client.js"
+        repo="Nuist666/blog_comment"
+        issue-term="python气象信息系统工程 第十二章"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
       
     </div>
     
