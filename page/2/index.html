@@ -99,7 +99,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Overflow-Mirai-LLOneBot-OneBot/" style="font-size: 10px;">Overflow,Mirai,LLOneBot,OneBot</a> <a href="/tags/python-%E6%B0%94%E8%B1%A1%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E5%B7%A5%E7%A8%8B/" style="font-size: 20px;">python,气象信息系统工程</a> <a href="/tags/%E5%8D%8E%E4%B8%BA%E4%BA%91-%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2-Hexo/" style="font-size: 10px;">华为云,个人博客,Hexo</a> <a href="/tags/%E6%A8%A1%E6%9D%BF-%E5%B0%8F%E4%B9%A6%E5%8C%A0-%E4%B8%89%E5%B3%B0%E7%9C%9F%E7%99%BD-%E6%96%B0%E5%BB%BA/" style="font-size: 10px;">模板,小书匠,三峰真白,新建</a>
+						<a href="/tags/Java/" style="font-size: 10px;">Java</a> <a href="/tags/Overflow-Mirai-LLOneBot-OneBot/" style="font-size: 10px;">Overflow,Mirai,LLOneBot,OneBot</a> <a href="/tags/python-%E6%B0%94%E8%B1%A1%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E5%B7%A5%E7%A8%8B/" style="font-size: 20px;">python,气象信息系统工程</a> <a href="/tags/%E5%8D%8E%E4%B8%BA%E4%BA%91-%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2-Hexo/" style="font-size: 10px;">华为云,个人博客,Hexo</a> <a href="/tags/%E6%A8%A1%E6%9D%BF-%E5%B0%8F%E4%B9%A6%E5%8C%A0-%E4%B8%89%E5%B3%B0%E7%9C%9F%E7%99%BD-%E6%96%B0%E5%BB%BA/" style="font-size: 10px;">模板,小书匠,三峰真白,新建</a>
 					</div>
 				</section>
 				
@@ -238,11 +238,11 @@ console.log(`
 </nav>
       <div class="body-wrap">
   
-    <article id="post-overflow" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-华为云" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2024/03/24/overflow/" class="article-date">
-  	<time datetime="2024-03-24T15:13:19.412Z" itemprop="datePublished">2024-03-24</time>
+      <a href="/2024/04/14/%E5%8D%8E%E4%B8%BA%E4%BA%91/" class="article-date">
+  	<time datetime="2024-04-14T01:01:15.896Z" itemprop="datePublished">2024-04-14</time>
 </a>
     </div>
   
@@ -255,10 +255,8 @@ console.log(`
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2024/03/24/overflow/">
-        Overflow 溢出核心——基于LLOneBot实现与部署
-        
-          <span class="title-pop-out">[置顶]</a>
+      <a class="article-title" href="/2024/04/14/%E5%8D%8E%E4%B8%BA%E4%BA%91/">
+        华为云——基于Hexo快速搭建博客
         
       </a>
     </h1>
@@ -269,63 +267,165 @@ console.log(`
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>猫猫式 mirai 实现于 Onebot 11。<br>让 mirai 框架加入 Onebot 大家庭!</p>
-<div align="center">
-<img src=/images/茜.ico alt="茜">
-</div>
+        <h1 id="名词解释"><a href="#名词解释" class="headerlink" title="名词解释"></a>名词解释</h1><p>基本概念、云服务简介、专有名词解释<br><strong>弹性云服务器 ECS</strong>：是一种可随时自助获取、可弹性伸缩的云服务器，可帮助您打造可靠、安全、灵活、高效的应用环境，确保服务持久稳定运行，提升运维效率。<br><strong>弹性公网IP EIP</strong>：提供独立的公网IP资源，包括公网IP地址与公网出口带宽服务。可以与弹性云服务器、裸金属服务器、虚拟IP、弹性负载均衡、NAT网关等资源灵活地绑定及解绑。</p>
+<h1 id="方案概述"><a href="#方案概述" class="headerlink" title="方案概述"></a>方案概述</h1><h3 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h3><p>该方案在弹性云服务器 ECS上基于Hexo框架快速搭建个人博客，Hexo是一个纯静态的博客网站，Hexo使用 Markdown（或其他渲染引擎）解析文章，可把用户编辑好的Markdown文件，按照指定的主题快速解析成静态网页。</p>
+<h3 id="方案架构"><a href="#方案架构" class="headerlink" title="方案架构"></a>方案架构</h3><p>该解决方案帮助用户在华为云弹性云服务器上基于Hexo框架快速搭建博客。架构如下图所示：<br><img src="/images/%E6%96%B9%E6%A1%88%E6%9E%B6%E6%9E%84.png" alt="方案架构"><br>该解决方案会部署如下资源：<br>• 创建一台弹性云服务器ECS，用于安装Node.js环境和搭建Hexo博客框架。</p>
+<p>• 部署一个弹性公网IP，并绑定到弹性云服务器，用于提供访问公网和被公网访问能力。</p>
+<p>• 创建一个安全组，保护弹性云服务器的网络安全，通过配置安全组规则，限定云服务器的访问端口，保证个人网站安全。</p>
+<h3 id="方案优势"><a href="#方案优势" class="headerlink" title="方案优势"></a>方案优势</h3><p>• 快速生成<br>相比动态博客，Hexo有着无可比拟的静态代码生成速度，且不依赖于数据库。</p>
+<p>• 低成本<br>提供极致性价比的云服务器，用户可以根据实际需求选择不同规格的弹性云服务器 ECS。</p>
+<p>• 一键部署<br>一键式部署弹性云服务器 ECS、弹性公网IP，帮助您基于Hexo快速搭建博客。</p>
+<h3 id="约束与限制"><a href="#约束与限制" class="headerlink" title="约束与限制"></a>约束与限制</h3><p>• 部署该解决方案之前，需要注册华为帐号并开通华为云，完成实名认证，且帐号不能处于欠费或冻结状态，请预估价格，确保余额充足。<br>• 该解决方案部署成功后，搭建Hexo博客环境需用时5-10分钟，完成后方可进行验证服务。</p>
+<h1 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h1><h3 id="创建rf-admin-trust委托（可选）"><a href="#创建rf-admin-trust委托（可选）" class="headerlink" title="创建rf_admin_trust委托（可选）"></a>创建rf_admin_trust委托（可选）</h3><p>1.进入华为云官网，打开<a target="_blank" rel="noopener" href="https://console.huaweicloud.com/console/?region=cn-north-4#/home">控制台管理</a>界面，鼠标移动至个人帐号处，打开“统一身份认证”菜单<br><img src="/images/%E6%8E%A7%E5%88%B6%E5%8F%B0%E7%AE%A1%E7%90%86%E7%95%8C%E9%9D%A2.png" alt="控制台管理界面"><br>2.进入“委托”菜单，搜索“rf_admin_trust”委托<br><img src="/images/%E5%A7%94%E6%89%98%E5%88%97%E8%A1%A82.png" alt="委托列表"><br>• 如果委托存在，则不用执行接下来的创建委托的步骤<br>• 如果委托不存在时执行接下来的步骤创建委托</p>
+<p>3.单击步骤2界面中的“创建委托”按钮，在委托名称中输入“rf_admin_trust”，委托类型选择“云服务”，输入“RFS”，单击“下一步”<br><img src="/images/%E5%88%9B%E5%BB%BA%E5%A7%94%E6%89%98.png" alt="创建委托"><br>4.在搜索框中输入”Tenant Administrator”权限，并勾选搜索结果，单击下一步<br><img src="/images/%E9%80%89%E6%8B%A9%E7%AD%96%E7%95%A5.png" alt="选择策略"><br>5.选择“所有资源”，并单击确定完成配置<br><img src="/images/%E8%AE%BE%E7%BD%AE%E6%8E%88%E6%9D%83%E8%8C%83%E5%9B%B4.png" alt="设置授权范围"><br>6.出现下图所示则需要等待一段时间才可生效。<br><img src="/images/%E6%8E%88%E6%9D%83%E7%94%9F%E6%95%88%E6%97%B6%E9%97%B4%E6%8F%90%E9%86%92.png" alt="授权生效时间提醒"><br>7.提示授权成功，单击完成，返回”委托”列表<br><img src="/images/%E6%8E%88%E6%9D%83%E6%88%90%E5%8A%9F.png" alt="授权成功"><br>8.“委托”列表中出现“rf_admin_trust”委托则创建成功<br><img src="/images/%E5%A7%94%E6%89%98%E5%88%97%E8%A1%A8.png" alt="委托列表"></p>
+<h1 id="快速部署"><a href="#快速部署" class="headerlink" title="快速部署"></a>快速部署</h1><p>本章节主要帮助用户快速部署该解决方案。</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>类型</th>
+<th>是否必填</th>
+<th>参数解释</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>vpc_name</td>
+<td>String</td>
+<td>必填</td>
+<td>虚拟私有云名称，该模板新建VPC，不允许重名。取值范围：1-57个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）。</td>
+<td>building-a-blog-with-hexo_demo</td>
+</tr>
+<tr>
+<td>secgroup_name</td>
+<td>String</td>
+<td>必填</td>
+<td>安全组名称，该模板新建安全组，安全组规则请参考<a target="_blank" rel="noopener" href="https://support.huaweicloud.com/bbhexo-ctf/zh-cn_topic_0000001288467176.html#ZH-CN_TOPIC_0000001288467176__section10713182181512">安全组规则修改（可选）</a>。取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）。</td>
+<td>building-a-blog-with-hexo_demo</td>
+</tr>
+<tr>
+<td>ecs_name</td>
+<td>String</td>
+<td>必填</td>
+<td>弹性云服务器名称，命名方式为{ecs_name}_ecs，不允许重名。取值范围：1-60个字符，支持字母、数字、中文、下划线（_）、中划线（-）、英文句号（.）。</td>
+<td>building-a-blog-with-hexo_demo</td>
+</tr>
+<tr>
+<td>ecs_flavor</td>
+<td>String</td>
+<td>必填</td>
+<td>弹性云服务器规格，具体规格请参考官网<a target="_blank" rel="noopener" href="https://support.huaweicloud.com/productdesc-ecs/zh-cn_topic_0159822360.html">弹性云服务器规格清单</a>。</td>
+<td>s6.medium.2</td>
+</tr>
+<tr>
+<td>ecs_password</td>
+<td>String</td>
+<td>必填</td>
+<td>弹性云服务器初始密码，创建完成后，请参考登录ECS控制台修改密码。取值范围：长度为8-26位，密码至少必须包含大写字母、小写字母、数字和特殊字符（!@$%^-_&#x3D;+[{}]:,.&#x2F;?）中的三种，密码不能包含用户名或用户名的逆序。管理员帐户为root。</td>
+<td>空</td>
+</tr>
+<tr>
+<td>system_disk_size</td>
+<td>String</td>
+<td>必填</td>
+<td>系统盘大小，以GB为单位，取值范围为40~1024，不支持缩盘。</td>
+<td>40</td>
+</tr>
+<tr>
+<td>charging_mode</td>
+<td>String</td>
+<td>必填</td>
+<td>计费模式，默认自动扣费，取值为prePaid（包年包月）或postPaid（按需计费）。</td>
+<td>postPaid</td>
+</tr>
+<tr>
+<td>charging_unit</td>
+<td>String</td>
+<td>必选</td>
+<td>计费周期单位，当计费方式设置为prePaid，此参数是必填项。有效值为：month（包月）和year（包年）</td>
+<td>month</td>
+</tr>
+<tr>
+<td>charging_period</td>
+<td>number</td>
+<td>必填</td>
+<td>计费周期，当计费方式设置为prePaid，此参数是必填项。当计费周期单位设置为month，取值范围为1-9；当计费周期单位设置为year，取值范围为1-3。默认1。</td>
+<td>1</td>
+</tr>
+<tr>
+<td>eip_bandwidth_size</td>
+<td>number</td>
+<td>必填</td>
+<td>弹性公网IP带宽大小，该模板采用按带宽计费。取值范围为1-2000Mbit&#x2F;s。</td>
+<td>5</td>
+</tr>
+</tbody></table>
+<p>1.登录<a target="_blank" rel="noopener" href="https://www.huaweicloud.com/solution/implementations/index.html">华为云解决方案实践</a>，选择“基于Hexo快速搭建博客”解决方案。单击“一键部署”，跳转至解决方案创建堆栈界面。<br><img src="/images/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%E5%AE%9E%E6%96%BD%E5%BA%93.png" alt="解决方案实施库"><br>2.在选择模板界面中,单击“下一步”。<br><img src="/images/%E9%80%89%E6%8B%A9%E6%A8%A1%E6%9D%BF.png" alt="选择模板"><br>3.在配置参数界面中，参考上述表格完成自定义参数填写，单击“下一步”。<br><img src="/images/%E9%85%8D%E7%BD%AE%E5%8F%82%E6%95%B0.png" alt="配置参数"><br>4.在资源栈设置页面中，权限委托选择“rf_admin_trust”(可选)，单击“下一步”。<br><img src="/images/%E8%B5%84%E6%BA%90%E6%A0%88%E8%AE%BE%E7%BD%AE.png" alt="资源栈设置"><br>5.在配置确认页面中，单击“创建执行计划”。<br><img src="/images/%E9%85%8D%E7%BD%AE%E7%A1%AE%E8%AE%A4.png" alt="配置确认"><br>6.在弹出的创建执行计划框中，自定义填写执行计划名称，单击“确定”。<br><img src="/images/%E5%88%9B%E5%BB%BA%E6%89%A7%E8%A1%8C%E8%AE%A1%E5%88%92.png" alt="创建执行计划"><br>7.待执行计划状态为“创建成功，待部署”后，单击“部署”，并且在弹出的执行计划确认框中单击“执行”。<br><img src="/images/%E6%89%A7%E8%A1%8C%E8%AE%A1%E5%88%92.png" alt="执行计划"></p>
+<p><img src="/images/%E6%89%A7%E8%A1%8C%E8%AE%A1%E5%88%92%E7%A1%AE%E8%AE%A4.png" alt="执行计划确认"><br>8.等待“事件”中出现“Apply required resource success”，表示该解决方案已经部署完成。<br><img src="/images/%E8%B5%84%E6%BA%90%E5%88%9B%E5%BB%BA%E6%88%90%E5%8A%9F.png" alt="资源创建成功"></p>
+<h1 id="开始使用"><a href="#开始使用" class="headerlink" title="开始使用"></a>开始使用</h1><h3 id="安全组规则修改（可选）"><a href="#安全组规则修改（可选）" class="headerlink" title="安全组规则修改（可选）"></a>安全组规则修改（可选）</h3><p>安全组实际是网络流量访问策略，包括网络流量入方向规则和出方向规则，通过这些规则为安全组内具有相同保护需求并且相互信任的云服务器、云容器、云数据库等实例提供安全保护。<br>• 该解决方案使用4000端口用来访问网站，默认全放通，请参考<a target="_blank" rel="noopener" href="https://support.huaweicloud.com/usermanual-vpc/vpc_SecurityGroup_0005.html">修改安全组规则</a>，配置IP地址白名单，以便能正常使用服务。<br>• 该解决方案使用22端口用来远程登录弹性云服务器 ECS，默认对该方案创建的VPC子网网段放开，请参考<a target="_blank" rel="noopener" href="https://support.huaweicloud.com/usermanual-vpc/vpc_SecurityGroup_0005.html">修改安全组规则</a>，配置IP地址白名单，以便能正常访问服务。<br>1.单击”资源“项目中的弹性云服务器<br><img src="/images/%E6%9F%A5%E7%9C%8B%E5%BC%B9%E6%80%A7%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8.png" alt="查看弹性云服务器"><br>2.点击右上角的”远程登录”<br><img src="/images/%E7%82%B9%E5%87%BB%E8%BF%9C%E7%A8%8B%E7%99%BB%E5%BD%95.png" alt="点击远程登录"><br>3.在弹出的窗口中点击”添加安全组规则”<br><img src="/images/%E6%B7%BB%E5%8A%A0%E5%AE%89%E5%85%A8%E7%BB%84%E8%A7%84%E5%88%99.png" alt="添加安全组规则"><br>4.入方向一键放通常用端口并确认<br><img src="/images/%E5%85%A5%E6%96%B9%E5%90%91%E4%B8%80%E9%94%AE%E6%94%BE%E9%80%9A%E5%B8%B8%E7%94%A8%E7%AB%AF%E5%8F%A3.png" alt="入方向一键放通常用端口"><br><img src="/images/%E5%85%A5%E6%96%B9%E5%90%91%E4%B8%80%E9%94%AE%E6%94%BE%E9%80%9A%E5%B8%B8%E7%94%A8%E7%AB%AF%E5%8F%A3%E7%A1%AE%E5%AE%9A.png" alt="入方向一键放通常用端口确定"><br>5.同理，出方向一键放通常用端口并确认。若已有安全组内规则无需添加。<br><img src="/images/%E5%87%BA%E6%96%B9%E5%90%91%E4%B8%80%E9%94%AE%E6%94%BE%E9%80%9A%E5%B8%B8%E7%94%A8%E7%AB%AF%E5%8F%A3.png" alt="出方向一键放通常用端口"><br><img src="/images/%E5%87%BA%E6%96%B9%E5%90%91%E4%B8%80%E9%94%AE%E6%94%BE%E9%80%9A%E5%B8%B8%E7%94%A8%E7%AB%AF%E5%8F%A3%E7%A1%AE%E5%AE%9A.png" alt="出方向一键放通常用端口确定"></p>
+<h3 id="验证服务"><a href="#验证服务" class="headerlink" title="验证服务"></a>验证服务</h3><p>1.单击该方案堆栈详情页面的“输出”，查看访问Hexo网站的站点URL。在浏览器访问该地址，进入已搭建完成的Hexo博客首页。<br>查看输出的站点URL<br><img src="/images/%E6%9F%A5%E7%9C%8B%E8%BE%93%E5%87%BA%E7%9A%84%E7%AB%99%E7%82%B9URL.png" alt="查看输出的站点URL"></p>
+<p>2.单击该方案堆栈详情页面的“输出”，查看搭建hexo博客项目的初始化目录。通过MobaXterm或其他终端工具以帐号（root）、密码方式连接云服务器登录。然后进入hexo博客项目初始化目录，可使用Vscode、sublime等开发编辑工具对项目已有.md文件进行修改操作。<br><img src="/images/%E6%9F%A5%E7%9C%8B%E6%90%AD%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2%E9%A1%B9%E7%9B%AE%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96%E7%9B%AE%E5%BD%95.png" alt="查看搭建hexo博客项目的初始化目录"><br>本人使用CloudShell登录。在”资源“项目中的弹性云服务器页面中，点击远程登录，在弹出的页面中选择CloudShell登录。<br><img src="/images/CloudShell%E7%99%BB%E5%BD%95.png" alt="CloudShell登录"><br>输入密码并连接<br><img src="/images/CloudShell%E8%BF%9E%E6%8E%A5.png" alt="CloudShell连接"><br>连接成功后如下图所示<br><img src="/images/CloudShell%E8%BF%9E%E6%8E%A5%E6%88%90%E5%8A%9F.png" alt="CloudShell连接成功"><br>查看搭建hexo博客项目的初始化目录<br><img src="/images/%E6%9F%A5%E7%9C%8B%E6%90%AD%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2%E9%A1%B9%E7%9B%AE%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96%E7%9B%AE%E5%BD%95.png" alt="查看搭建hexo博客项目的初始化目录"><br>通过终端工具进入该目录，查看搭建的hexo博客项目。<br><img src="/images/%E6%9F%A5%E7%9C%8B%E5%8D%9A%E5%AE%A2%E9%A1%B9%E7%9B%AE.png" alt="查看博客项目"><br>若没有该目录，根据附录内容进行安装。<br>若未使用ubuntu服务器，可手动切换ubuntu操作系统。<br><img src="/images/%E5%88%87%E6%8D%A2%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F.png" alt="切换操作系统"><br><img src="/images/%E5%88%87%E6%8D%A2%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%A1%AE%E8%AE%A4.png" alt="切换操作系统确认"><br>3.创建新贴、运行启动hexo、生成静态文件及部署等操作。具体操作见附录。<br><img src="/images/%E8%BF%90%E8%A1%8Chexo%E6%8E%A7%E5%88%B6%E5%8F%B0%E7%95%8C%E9%9D%A2.png" alt="运行hexo控制台界面"><br><img src="/images/%E8%BF%90%E8%A1%8C%E5%90%AF%E5%8A%A8hexo%E7%95%8C%E9%9D%A2.png" alt="运行启动hexo界面"></p>
+<h3 id="后台运行hexo-可选"><a href="#后台运行hexo-可选" class="headerlink" title="后台运行hexo(可选)"></a>后台运行hexo(可选)</h3><p>1.安装pm2</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g pm2</span><br></pre></td></tr></table></figure>
+<p>2.在博客根目录下面创建一个hexo_run.js</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">const &#123; exec &#125; = require(&#x27;child_process&#x27;)</span><br><span class="line">exec(&#x27;hexo server&#x27;,(error, stdout, stderr) =&gt; &#123;</span><br><span class="line">        if(error)&#123;</span><br><span class="line">                console.log(&#x27;exec error: $&#123;error&#125;&#x27;)</span><br><span class="line">                return</span><br><span class="line">        &#125;</span><br><span class="line">        console.log(&#x27;stdout: $&#123;stdout&#125;&#x27;);</span><br><span class="line">        console.log(&#x27;stderr: $&#123;stderr&#125;&#x27;);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>3.cd到博客根目录下运行脚本</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pm2 start hexo_run.js</span><br></pre></td></tr></table></figure>
+<p><img src="/images/%E8%BF%90%E8%A1%8C%E8%84%9A%E6%9C%AC.png" alt="运行脚本"><br>4.停止运行脚本</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pm2 stop hexo_run.js</span><br></pre></td></tr></table></figure>
+<p><img src="/images/%E5%81%9C%E6%AD%A2%E8%BF%90%E8%A1%8C%E8%84%9A%E6%9C%AC.png" alt="停止运行脚本"></p>
+<h1 id="快速卸载"><a href="#快速卸载" class="headerlink" title="快速卸载"></a>快速卸载</h1><p>1.解决方案部署成功后，单击该方案堆栈后的“删除”。<br><img src="/images/%E4%B8%80%E9%94%AE%E5%8D%B8%E8%BD%BD.png" alt="一键卸载"><br>2.在弹出的删除堆栈确认框中，输入Delete，单击“确定”，即可卸载解决方案。<br><img src="/images/%E5%88%A0%E9%99%A4%E5%A0%86%E6%A0%88%E7%A1%AE%E8%AE%A4.png" alt="删除堆栈确认"></p>
+<h1 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h1><h2 id="使用全新的ubuntu服务器进行部署"><a href="#使用全新的ubuntu服务器进行部署" class="headerlink" title="使用全新的ubuntu服务器进行部署"></a>使用全新的ubuntu服务器进行部署</h2><h3 id="1-安装nodejs、npm"><a href="#1-安装nodejs、npm" class="headerlink" title="1.安装nodejs、npm"></a>1.安装nodejs、npm</h3><h4 id="方法一-通过NodeSource提供的官方包安装-自带最新npm（最推荐）"><a href="#方法一-通过NodeSource提供的官方包安装-自带最新npm（最推荐）" class="headerlink" title="方法一 通过NodeSource提供的官方包安装 自带最新npm（最推荐）"></a>方法一 通过NodeSource提供的官方包安装 自带最新npm（最推荐）</h4><p>以下是 Nodejs 20.x的安装，一行代码搞定<br>&amp;&amp;\ 的意思是前面的命令执行无误后，再执行后面代码</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash - &amp;&amp;\</span><br><span class="line">sudo apt-get install -y nodejs</span><br></pre></td></tr></table></figure>
+<h4 id="方法二-直接用apt安装，然后用n版本工具升级最新版"><a href="#方法二-直接用apt安装，然后用n版本工具升级最新版" class="headerlink" title="方法二 直接用apt安装，然后用n版本工具升级最新版"></a>方法二 直接用apt安装，然后用n版本工具升级最新版</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">apt-get update</span><br><span class="line">apt-get install nodejs</span><br><span class="line">apt-get install npm</span><br><span class="line">npm config set registry https://mirrors.huaweicloud.com/repository/npm/</span><br><span class="line"># 安装n模块</span><br><span class="line">npm install -g n</span><br><span class="line"># 升级nodejs到最新stable版本</span><br><span class="line">n stable</span><br><span class="line"># 升级最新npm</span><br><span class="line">npm install npm@latest -g</span><br></pre></td></tr></table></figure>
+<h3 id="2-查看nodejs和npm版本"><a href="#2-查看nodejs和npm版本" class="headerlink" title="2.查看nodejs和npm版本"></a>2.查看nodejs和npm版本</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure>
 
+<p><img src="/images/nodejs-npm%E7%89%88%E6%9C%AC.png" alt="nodejs-npm版本"></p>
+<h3 id="3-安装hexo"><a href="#3-安装hexo" class="headerlink" title="3.安装hexo"></a>3.安装hexo</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
 
-<hr>
-<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><h3 id="Overflow"><a href="#Overflow" class="headerlink" title="Overflow"></a>Overflow</h3><p><a target="_blank" rel="noopener" href="https://mirai.mrxiaom.top/">Overflow</a> 是 <a target="_blank" rel="noopener" href="https://github.com/mamoe/mirai/tree/dev/mirai-core-api">mirai-core-api</a> 的实现，该项目因腾讯官方持续更新签名算法打击机器人社区而产生，产生目的是扩展 mirai 的可用范围，当实在没有人更新 mirai-core 的协议实现时，可使用本项目将 mirai 接口嫁接到 Onebot 实现上，以实现快速迁移，而无需修改原有业务代码。</p>
-<h3 id="LiteLoaderQQNT"><a href="#LiteLoaderQQNT" class="headerlink" title="LiteLoaderQQNT"></a>LiteLoaderQQNT</h3><p><a target="_blank" rel="noopener" href="https://liteloaderqqnt.github.io/">LiteLoaderQQNT</a> 是 QQNT 的插件加载器，一般在 QQNT 的环境内简称为 LiteLoader。它可以让你自由地为 QQNT 添加各种插件，并实现例如美化主题、增加功能等各种功能。</p>
-<h3 id="LLOneBot-API"><a href="#LLOneBot-API" class="headerlink" title="LLOneBot API"></a>LLOneBot API</h3><p><a target="_blank" rel="noopener" href="https://llonebot.github.io/zh-CN/">LLOneBot API</a>是LiteLoaderQQNT的一个插件，使你的NTQQ支持OneBot11协议进行QQ机器人开发。</p>
-<h1 id="快速开始"><a href="#快速开始" class="headerlink" title="快速开始"></a>快速开始</h1><p>本人部署在Windows端，其他操作系统部署方法类似。</p>
-<h2 id="一、安装QQNT"><a href="#一、安装QQNT" class="headerlink" title="一、安装QQNT"></a>一、安装QQNT</h2><p>进入QQ PC版官方网站，选择全新版本下载并安装。<br><img src="/images/qqnt.png" alt="QQNT"><br>注意：<strong>强烈建议使用小号！</strong></p>
-<h2 id="二、安装LiteLoaderQQNT"><a href="#二、安装LiteLoaderQQNT" class="headerlink" title="二、安装LiteLoaderQQNT"></a>二、安装LiteLoaderQQNT</h2><p>注意在安装之前请先关闭 QQ ！<br>推荐使用<a target="_blank" rel="noopener" href="https://github.com/Mzdyl/LiteLoaderQQNT_Install/releases">一键安装脚本</a>，支持 Windows、Linux、MacOS.<br>手动安装见<a target="_blank" rel="noopener" href="https://liteloaderqqnt.github.io/guide/install.html">LiteLoaderQQNT文档</a><br>注：一键安装脚本请以管理员身份运行，运行成功结果如下：<br><img src="/images/%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85%E8%84%9A%E6%9C%AC.png" alt="一键安装脚本"></p>
-<p>安装成功后打开QQ的设置，看到了 LiteLoaderQQNT 就代表安装成功了.<br><img src="/images/LiteLoaderQQNT.png" alt="LiteLoaderQQNT"></p>
-<h2 id="三、安装LLOneBot"><a href="#三、安装LLOneBot" class="headerlink" title="三、安装LLOneBot"></a>三、安装LLOneBot</h2><p>下载<a target="_blank" rel="noopener" href="https://github.com/LLOneBot/LLOneBot/releases">LLOneBot</a> 最新版本 解压放到 plugins 目录下，然后重启 QQ 即可.<br>注：plugins 目录可以在 LiteLoaderQQNT 的页面找到并一键打开.<br><img src="/images/plugins%E7%9B%AE%E5%BD%951.png" alt="plugins目录1"><br><img src="/images/plugins%E7%9B%AE%E5%BD%952.png" alt="plugins目录2"><br><img src="/images/plugins%E7%9B%AE%E5%BD%953.png" alt="plugins目录3"><br>目录结构如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">├── plugins</span><br><span class="line">│   ├── LLOneBot</span><br><span class="line">│   │   └── main/main.cjs</span><br><span class="line">│   │   └── preload/preload.cjs</span><br><span class="line">│   │   └── renderer/index.js</span><br><span class="line">│   │   └── manifest.json</span><br><span class="line">│   │   └── node_modules/...</span><br></pre></td></tr></table></figure>
+<p><img src="/images/%E5%AE%89%E8%A3%85hexo.png" alt="安装hexo"></p>
+<h3 id="4-在指定位置创建博客项目文件（联网下载模板-用到git）"><a href="#4-在指定位置创建博客项目文件（联网下载模板-用到git）" class="headerlink" title="4.在指定位置创建博客项目文件（联网下载模板,用到git）"></a>4.在指定位置创建博客项目文件（联网下载模板,用到git）</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo init my_hexo_blog</span><br><span class="line"># my_hexo_blog是你的项目文件夹名称,可以随便起</span><br><span class="line"># 此处下载速度慢，不要关闭窗口</span><br></pre></td></tr></table></figure>
+<p><img src="/images/%E5%88%9B%E5%BB%BA%E5%8D%9A%E5%AE%A2%E9%A1%B9%E7%9B%AE%E6%96%87%E4%BB%B6.png" alt="创建博客项目文件"></p>
+<h3 id="5-进入目录安装依赖项"><a href="#5-进入目录安装依赖项" class="headerlink" title="5.进入目录安装依赖项"></a>5.进入目录安装依赖项</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd my_hexo_blog</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
+<p><img src="/images/%E5%AE%89%E8%A3%85%E4%BE%9D%E8%B5%96%E9%A1%B9.png" alt="安装依赖项"></p>
+<h3 id="6-生成博客"><a href="#6-生成博客" class="headerlink" title="6.生成博客"></a>6.生成博客</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g </span><br><span class="line"># g是generate的缩写</span><br></pre></td></tr></table></figure>
+<p><img src="/images/%E7%94%9F%E6%88%90%E5%8D%9A%E5%AE%A2.png" alt="生成博客"></p>
+<h3 id="7-运行服务器"><a href="#7-运行服务器" class="headerlink" title="7.运行服务器"></a>7.运行服务器</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br><span class="line"># s是server的缩写</span><br><span class="line"># 可指定端口号，hexo s -p 80 中设置端口号80，浏览器默认使用80端口</span><br></pre></td></tr></table></figure>
 
-<p>重启QQ后检查是否安装成功<br><img src="/images/LLOneBot1.png" alt="LLOneBot"><br>至此OneBot部署完毕。</p>
-<h2 id="四、下载-Overflow-mirai-console-整合包"><a href="#四、下载-Overflow-mirai-console-整合包" class="headerlink" title="四、下载 Overflow + mirai-console 整合包"></a>四、下载 Overflow + mirai-console 整合包</h2><p>进入<a target="_blank" rel="noopener" href="https://mirai.mrxiaom.top/#get-started">Overflow官网</a>，根据自己的网络环境选择下载源，然后点击刷新版本。选择最新overflow版本后点击下载。<br><img src="/images/overflow1.png" alt="overflow1"><br>(补充：如果版本加载不出来，可以使用<a target="_blank" rel="noopener" href="https://mirai.mrxiaom.top/docs/install/MCLOverflow.html">已修改的MCL安装</a>。)<br>下载后解压并运行start.bat<br><img src="/images/overflow2.png" alt="overflow2"><br>出现下图即可关闭<br><img src="/images/overflow3.png" alt="overflow3"><br>文件夹内生成配置文件。打开配置文件 <code>overflow.json</code> 以备用。<br><img src="/images/overflow4.png" alt="overflow4"></p>
-<h2 id="五、OneBot对接配置"><a href="#五、OneBot对接配置" class="headerlink" title="五、OneBot对接配置"></a>五、OneBot对接配置</h2><p>Onebot 实现部署完成后，取得其 <strong>正向 WebSocket 地址</strong> 或 <strong>反向 WebSocket 地址</strong>，任选其一填入配置文件中，再次启动即可。</p>
-<h3 id="1-正向WebSocket"><a href="#1-正向WebSocket" class="headerlink" title="1.正向WebSocket"></a>1.正向WebSocket</h3><p>用于接受应用端的正向WS连接。即让 Overflow 去连接 Onebot 协议实现。<br>如正向 ws 绑定的端口为 3001<br>需要在应用端配置的WS地址为 ws:&#x2F;&#x2F;localhost:3001<br><img src="/images/websocket1.png" alt="websocket1"></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;ws_host&quot;: &quot;ws://localhost:3001&quot;,</span><br><span class="line">    &quot;reversed_ws_port&quot;: -1,</span><br><span class="line">    &quot;token&quot;: &quot;&quot;,</span><br><span class="line">    &quot;no_platform&quot;: false,</span><br><span class="line">    &quot;retry_times&quot;: 5,</span><br><span class="line">    &quot;retry_wait_mills&quot;: 5000,</span><br><span class="line">    &quot;retry_rest_mills&quot;: 60000</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><img src="/images/websocket2.png" alt="websocket2"><br>点击保存后运行start.bat,出现<code>已连接到服务器</code>字样即可。<br><img src="/images/websocket3.png" alt="websocket3"></p>
-<h3 id="2-反向WebSocket"><a href="#2-反向WebSocket" class="headerlink" title="2.反向WebSocket"></a>2.反向WebSocket</h3><p>用于LLOneBot主动连接应用端绑定的反向WS地址<br>如在 overflow 配置了 onebot 的端口为 3002<br>那么在 LLOneBot 配置的反向WS地址为 ws:&#x2F;&#x2F;localhost:3002<br><img src="/images/websocket4.png" alt="websocket4"></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;ws_host&quot;: &quot;ws://localhost:3001&quot;,</span><br><span class="line">    &quot;reversed_ws_port&quot;: 3002,</span><br><span class="line">    &quot;token&quot;: &quot;&quot;,</span><br><span class="line">    &quot;no_platform&quot;: false,</span><br><span class="line">    &quot;retry_times&quot;: 5,</span><br><span class="line">    &quot;retry_wait_mills&quot;: 5000,</span><br><span class="line">    &quot;retry_rest_mills&quot;: 60000</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><img src="/images/websocket5.png" alt="websocket5"><br>点击保存后运行start.bat，出现<code>反向WebSocket客户端已连接</code>字样即可<br><img src="/images/websocket6.png" alt="websocket6"><br>可选：鉴权令牌，可自定义<br><img src="/images/websocket7.png" alt="websocket7"><br><img src="/images/websocket8.png" alt="websocket8"></p>
-<h2 id="六、总结"><a href="#六、总结" class="headerlink" title="六、总结"></a>六、总结</h2><p>以上将 mirai 接口嫁接到 Onebot 实现上，以实现快速迁移，而无需修改原有业务代码。</p>
-<h3 id="友情链接"><a href="#友情链接" class="headerlink" title="友情链接"></a>友情链接</h3><p>Mirai社区：<a target="_blank" rel="noopener" href="https://mirai.mamoe.net/">https://mirai.mamoe.net/</a><br>Mirai项目地址：<a target="_blank" rel="noopener" href="https://github.com/mamoe/mirai">https://github.com/mamoe/mirai</a><br>Overflow项目地址：<a target="_blank" rel="noopener" href="https://github.com/MrXiaoM/Overflow">https://github.com/MrXiaoM/Overflow</a><br>LiteLoaderQQNT项目地址：<a target="_blank" rel="noopener" href="https://github.com/LiteLoaderQQNT/LiteLoaderQQNT">https://github.com/LiteLoaderQQNT/LiteLoaderQQNT</a><br>LLOneBot项目地址：<a target="_blank" rel="noopener" href="https://github.com/LLOneBot/LLOneBot">https://github.com/LLOneBot/LLOneBot</a></p>
-<h3 id="本人曾用的mirai插件及HTTP-API："><a href="#本人曾用的mirai插件及HTTP-API：" class="headerlink" title="本人曾用的mirai插件及HTTP API："></a>本人曾用的mirai插件及HTTP API：</h3><p>ChatGPT 项目地址：<a target="_blank" rel="noopener" href="https://github.com/lss233/chatgpt-mirai-qq-bot">https://github.com/lss233/chatgpt-mirai-qq-bot</a><br>B站动态推送 项目地址：<a target="_blank" rel="noopener" href="https://github.com/Colter23/bilibili-dynamic-mirai-plugin">https://github.com/Colter23/bilibili-dynamic-mirai-plugin</a><br>蔚蓝档案攻略活动推送 项目地址：<a target="_blank" rel="noopener" href="https://github.com/diyigemt/arona">https://github.com/diyigemt/arona</a><br>ChatLearning 项目地址：<a target="_blank" rel="noopener" href="https://github.com/JHue58/ChatLearning">https://github.com/JHue58/ChatLearning</a><br>Theresa3rd-Bot 项目地址：<a target="_blank" rel="noopener" href="https://github.com/GardenHamster/Theresa3rd-Bot">https://github.com/GardenHamster/Theresa3rd-Bot</a></p>
-<h3 id="官方机器人分享"><a href="#官方机器人分享" class="headerlink" title="官方机器人分享"></a>官方机器人分享</h3><p>碧蓝档案：<br><a target="_blank" rel="noopener" href="https://qun.qq.com/qunpro/robot/qunshare?robot_uin=2854203783&robot_appid=102057050&biz_type=0">阿罗那小助手</a><br><a target="_blank" rel="noopener" href="https://qun.qq.com/qunpro/robot/qunshare?robot_uin=2854197266&robot_appid=102062652&biz_type=0">AL_1S</a><br><a target="_blank" rel="noopener" href="https://qun.qq.com/qunpro/robot/qunshare?robot_uin=2854214374&robot_appid=102057194&biz_type=0">AronaBot</a> <a target="_blank" rel="noopener" href="https://github.com/diyigemt/arona-reborn">Github</a><br>东方Project多功能型bot：<br><a target="_blank" rel="noopener" href="https://qun.qq.com/qunpro/robot/qunshare?robot_uin=3889001246&robot_appid=102076836&biz_type=0">YuukaBot&#x2F;幽幽子</a> <a target="_blank" rel="noopener" href="https://github.com/MelodyYuuka/YuukaBot-docs"> Github</a> <a target="_blank" rel="noopener" href="https://bot.yunmengdu.cn/">帮助文档</a><br>原神、星铁：<br><a target="_blank" rel="noopener" href="https://qun.qq.com/qunpro/robot/qunshare?robot_uin=3889011960&robot_appid=102089931&biz_type=0">妲妲</a></p>
-<center>  
-    <img src="/images/小夏.png"  alt="小夏">
-</center>
+<h3 id="8-打开浏览器，输入云服务器的ip地址就能看到一个精美的系统默认的博客页面"><a href="#8-打开浏览器，输入云服务器的ip地址就能看到一个精美的系统默认的博客页面" class="headerlink" title="8.打开浏览器，输入云服务器的ip地址就能看到一个精美的系统默认的博客页面"></a>8.打开浏览器，输入云服务器的ip地址就能看到一个精美的系统默认的博客页面</h3><p><img src="/images/%E5%8D%9A%E5%AE%A2%E5%88%9D%E5%A7%8B%E9%A1%B5%E9%9D%A2.png" alt="博客初始页面"></p>
+<h3 id="9-进入hexo博客项目的初始化目录，可使用Vscode、sublime等开发编辑工具对项目已有-md文件进行修改操作。"><a href="#9-进入hexo博客项目的初始化目录，可使用Vscode、sublime等开发编辑工具对项目已有-md文件进行修改操作。" class="headerlink" title="9.进入hexo博客项目的初始化目录，可使用Vscode、sublime等开发编辑工具对项目已有.md文件进行修改操作。"></a>9.进入hexo博客项目的初始化目录，可使用Vscode、sublime等开发编辑工具对项目已有.md文件进行修改操作。</h3><p><img src="/images/%E7%BC%96%E8%BE%91md%E6%96%87%E4%BB%B6.png" alt="编辑md文件"></p>
+<h3 id="10-美化博客界面"><a href="#10-美化博客界面" class="headerlink" title="10.美化博客界面"></a>10.美化博客界面</h3><p>前往<a target="_blank" rel="noopener" href="https://hexo.io/themes/">主题官网</a>，选择合适的主题进行美化。<br>例如：使用<a target="_blank" rel="noopener" href="https://github.com/kfein/hexo-theme-jelly">jelly主题</a><br>10.1 在my_hexo_blog目录打开终端，安装主题。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/preccrep/hexo-theme-jelly.git themes/jelly</span><br></pre></td></tr></table></figure>
+<p><img src="/images/%E5%AE%89%E8%A3%85jelly%E4%B8%BB%E9%A2%98.png" alt="安装jelly主题"><br>10.2 修改my_hexo_blog目录下_config.yml文件,主题选用jelly，其他的根据自己情况进行修改。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme: jelly</span><br></pre></td></tr></table></figure>
+<p><img src="/images/%E4%BF%AE%E6%94%B9config.png" alt="修改config"><br><img src="/images/%E4%BF%AE%E6%94%B9config2.png" alt="修改config2"><br>10.3根据自身需要修改&#x2F;themes&#x2F;jelly目录下的_config.yml文件<br><img src="/images/%E4%BF%AE%E6%94%B9config3.png" alt="修改config3"><br>10.4生成博客并运行服务器，打开浏览器查看效果。<br><img src="/images/jelly%E4%B8%BB%E9%A2%98%E7%95%8C%E9%9D%A2.png" alt="jelly主题界面"></p>
+<h3 id="11-新增、删除博客"><a href="#11-新增、删除博客" class="headerlink" title="11.新增、删除博客"></a>11.新增、删除博客</h3><p>在&#x2F;source&#x2F;_posts目录下新增markdown文件进行编写<br><img src="/images/%E6%96%B0%E5%A2%9E%E5%8D%9A%E5%AE%A2.png" alt="新增博客"><br>右键所需删除的博客选择删除<br><img src="/images/%E5%88%A0%E9%99%A4%E5%8D%9A%E5%AE%A2.png" alt="删除博客"></p>
+<h3 id="12-添加登录评论功能"><a href="#12-添加登录评论功能" class="headerlink" title="12.添加登录评论功能"></a>12.添加登录评论功能</h3><p><a target="_blank" rel="noopener" href="https://utteranc.es/">utterances</a> 是一款基于 GitHub issues 的评论工具。<br>比同类的工具 gitment、gitalk 以及 disqus 评论工具，优点如下：<br>1.极其轻量<br>2.加载非常快<br>3.配置比较简单</p>
+<h4 id="博客配置使用-utterances"><a href="#博客配置使用-utterances" class="headerlink" title="博客配置使用 utterances"></a>博客配置使用 utterances</h4><p>首先在github上创建一个空仓库，如：blog_comment，并且初始化设置，仓库必须是Public，而不是私有的，这样读者才可以查看以及发表评论。<br><img src="/images/%E5%88%9B%E5%BB%BA%E8%AF%84%E8%AE%BA%E4%BB%93%E5%BA%93.png" alt="创建评论仓库"><br>用vscode打开所需添加评论的md文件，添加以下代码：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">## 配置 utteranc评论,教程参考 https://utteranc.es/</span><br><span class="line">## 转换成自己的repo，格式为：github用户名/创建的仓库名</span><br><span class="line">&lt;script src=&quot;https://utteranc.es/client.js&quot;</span><br><span class="line">        repo=&quot;Nuist666/blog_comment&quot;</span><br><span class="line">        issue-term=&quot;pathname&quot;</span><br><span class="line">        theme=&quot;github-light&quot;</span><br><span class="line">        crossorigin=&quot;anonymous&quot;</span><br><span class="line">        async&gt;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p><img src="/images/%E6%B7%BB%E5%8A%A0%E8%AF%84%E8%AE%BA%E4%BB%A3%E7%A0%81.png" alt="添加评论代码"></p>
+<h4 id="github上安装-utterances"><a href="#github上安装-utterances" class="headerlink" title="github上安装 utterances"></a>github上安装 utterances</h4><p>首先必须在 github 上进行安装 utterances，访问 <a target="_blank" rel="noopener" href="https://github.com/apps/utterances">utterances应用程序</a> 然后点击 Install 按钮进行安装。<br><img src="/images/utterances%E5%AE%89%E8%A3%85.png" alt="utterances安装"><br>在这里可以选择可以关联的存储库，可以选择我们所拥有的库(也包括未来建立的库)或者某一个仓库，这里只选择某一个需要进行评论的库(blog_comment)，这样比较好。<br>安装完成即可，随后访问 <a target="_blank" rel="noopener" href="https://github.com/apps/utterances">utterances应用程序</a> 就不再是安装而是是执行配置项目。<br><img src="/images/utteranc%E9%85%8D%E7%BD%AE.png" alt="utteranc配置"><br>此时服务端配置已经完成，接着访问博客测试下评论。<br>点击Sign in with Github 进行登录<br><img src="/images/%E6%B7%BB%E5%8A%A0%E8%AF%84%E8%AE%BA.png" alt="添加评论"><br>登录成功后测试评论<br><img src="/images/%E6%B5%8B%E8%AF%95%E8%AF%84%E8%AE%BA.png" alt="测试评论"><br>可以看到评论成功，对应github仓库中新增一个issue<br><img src="/images/%E8%AF%84%E8%AE%BA%E6%88%90%E5%8A%9F.png" alt="评论成功"><br><img src="/images/%E8%AF%84%E8%AE%BA%E6%88%90%E5%8A%9F2.png" alt="评论成功"><br>至此登录评论功能添加完毕。</p>
 <script src="https://utteranc.es/client.js"
         repo="Nuist666/blog_comment"
-        issue-term="Overflow 溢出核心——基于LLOneBot实现与部署"
+        issue-term="华为云——基于Hexo快速搭建博客"
         theme="github-light"
         crossorigin="anonymous"
         async>
 </script>
+
       
     </div>
     
     <div class="article-info article-info-index">
       
-        <div class="article-pop-out tagcloud">
-          <a class="">置顶</a>
-        </div>
-      
       
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Overflow-Mirai-LLOneBot-OneBot/" rel="tag">Overflow,Mirai,LLOneBot,OneBot</a></li></ul>
+		<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%8D%8E%E4%B8%BA%E4%BA%91-%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2-Hexo/" rel="tag">华为云,个人博客,Hexo</a></li></ul>
 	</div>
 
       
 	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/%E5%B0%8F%E4%B9%A6%E5%8C%A0-%E6%97%A5%E8%AE%B0-2024-03/">/小书匠/日记/2024-03</a>
+	<a class="article-category-link" href="/categories/%E5%B0%8F%E4%B9%A6%E5%8C%A0-%E6%97%A5%E8%AE%B0-2024-04/">/小书匠/日记/2024-04</a>
 	</div>
 
 
@@ -347,7 +447,7 @@ console.log(`
   
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/15/">15</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/16/">16</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
     </nav>
   
 </div>
