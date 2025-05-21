@@ -1,3 +1,3 @@
-var posts=["2025/05/20/hello-world/","2025/05/20/archive-old-blogs/"];function toRandomPost(){
+var posts=["2025/05/20/archive-old-blogs/","2025/05/20/hello-world/"];function toRandomPost(){
     pjax.loadUrl('/'+posts[Math.floor(Math.random() * posts.length)]);
   };
