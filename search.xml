@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>项目分享：滚动歌词制作工具</title>
+      <link href="/2025/05/26/lrc-maker/"/>
+      <url>/2025/05/26/lrc-maker/</url>
+      
+        <content type="html"><![CDATA[<p><img src="/../img/2025/05/apple-touch-icon.png" alt="logo"></p><h1 id="歌词滚动姬"><a href="#歌词滚动姬" class="headerlink" title="歌词滚动姬"></a><a href="https://lrc-maker.nuist666.top/">歌词滚动姬</a></h1><h2 id="这个项目是什么"><a href="#这个项目是什么" class="headerlink" title="这个项目是什么"></a>这个项目是什么</h2><p>这是一个<a href="https://github.com/magic-akari/lrc-maker">滚动歌词制作工具</a>，滚动歌词是指带有时间标签的文本。</p><h2 id="为什么会有这个项目"><a href="#为什么会有这个项目" class="headerlink" title="为什么会有这个项目"></a>为什么会有这个项目</h2><p><a href="https://github.com/magic-akari">原作者</a>对于目前已有的工具不满意，无法跨平台使用，所以自己制作了一个。</p><h2 id="如何使用"><a href="#如何使用" class="headerlink" title="如何使用"></a>如何使用</h2><p>打开<a href="https://lrc-maker.nuist666.top/">歌词滚动姬</a>即可开始，你可以把这个链接收藏到浏览器书签。将文件拖放到页面中加载，使用箭头键和空格键插入时间戳。</p><p>原仓库链接：</p><ul><li><a href="https://github.com/magic-akari/lrc-maker/">https://github.com/magic-akari/lrc-maker/</a></li></ul><p>开发分支版本链接:</p><ul><li><a href="https://magic-akari.github.io/lrc-maker/">https://magic-akari.github.io/lrc-maker/</a></li><li><a href="https://lrc-maker.vercel.app/">https://lrc-maker.vercel.app/</a></li></ul><h2 id="热键"><a href="#热键" class="headerlink" title="热键"></a>热键</h2><table><thead><tr><th align="center">按键</th><th align="center">功能</th></tr></thead><tbody><tr><td align="center"><kbd>space</kbd></td><td align="center">插入时间标签</td></tr><tr><td align="center"><kbd>backspace</kbd> &#x2F; <kbd>delete</kbd> &#x2F; <kbd>⌫</kbd></td><td align="center">移除时间标签</td></tr><tr><td align="center"><kbd>ctrl</kbd><kbd>enter↵</kbd> &#x2F; <kbd>⌘</kbd><kbd>↩</kbd></td><td align="center">播放 &#x2F; 暂停</td></tr><tr><td align="center"><kbd>←</kbd> &#x2F; <kbd>A</kbd></td><td align="center">回退 5 秒</td></tr><tr><td align="center"><kbd>→</kbd> &#x2F; <kbd>D</kbd></td><td align="center">前进 5 秒</td></tr><tr><td align="center"><kbd>↑</kbd> &#x2F; <kbd>W</kbd> &#x2F; <kbd>J</kbd></td><td align="center">选择上一行</td></tr><tr><td align="center"><kbd>↓</kbd> &#x2F; <kbd>S</kbd> &#x2F; <kbd>K</kbd></td><td align="center">选择下一行</td></tr><tr><td align="center"><kbd>-</kbd> &#x2F; <kbd>+</kbd></td><td align="center">当前行时间标签微调</td></tr><tr><td align="center"><kbd>ctrl</kbd><kbd>↑</kbd> &#x2F; <kbd>⌘</kbd><kbd>↑</kbd></td><td align="center">提高播放速度</td></tr><tr><td align="center"><kbd>ctrl</kbd><kbd>↓</kbd> &#x2F; <kbd>⌘</kbd><kbd>↓</kbd></td><td align="center">降低播放速度</td></tr><tr><td align="center"><kbd>R</kbd></td><td align="center">重置播放速度</td></tr></tbody></table><h2 id="兼容性"><a href="#兼容性" class="headerlink" title="兼容性"></a>兼容性</h2><p>本项目的目标是兼容大部分现代浏览器，当前版本使用了很多的现代浏览器 API 来提升效能，改善用户体验。<br>本项目使用了 ES Module 来加载代码，这意味着浏览器的版本应该满足下列要求。</p><table><thead><tr><th align="left">浏览器</th><th align="left">版本</th></tr></thead><tbody><tr><td align="left">EDGE</td><td align="left">&gt;&#x3D; 16</td></tr><tr><td align="left">Firefox</td><td align="left">&gt;&#x3D; 60</td></tr><tr><td align="left">Chrome</td><td align="left">&gt;&#x3D; 61</td></tr><tr><td align="left">Safari</td><td align="left">&gt;&#x3D; 11</td></tr><tr><td align="left">ios_saf</td><td align="left">&gt;&#x3D; 11</td></tr></tbody></table><del>当前版本的 Edge 理论上应该支持，但是目前有不明原因导致代码加载后没有运行，这个问题留到 V8 内核的 Edge 发布后再做观察。</del><p>对 EDGE 浏览器低限度支持。</p><p>对于没有 ES Module 支持的浏览器，仍然做了回退处理以便正常使用。注意：此部分没有进行测试，旧浏览器仍然可能遇到 css 的布局错乱问题。</p><p>IE 等旧浏览器不再支持。对于这类浏览器使用者，可以使用本项目的<a href="https://lrc-maker.github.io/3.x">旧版本</a>。</p><h2 id="本地开发"><a href="#本地开发" class="headerlink" title="本地开发"></a>本地开发</h2><p>如果你想在本地计算机上运行这个项目，可以遵循下面操作。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 克隆这个仓库</span></span><br><span class="line">git <span class="built_in">clone</span> https://github.com/magic-akari/lrc-maker.git</span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> lrc-maker</span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装依赖</span></span><br><span class="line">npm i</span><br><span class="line"></span><br><span class="line"><span class="comment"># 构建</span></span><br><span class="line">npm run build</span><br><span class="line"></span><br><span class="line"><span class="comment"># 开发模式构建</span></span><br><span class="line">npm start</span><br></pre></td></tr></table></figure><h2 id="生产部署"><a href="#生产部署" class="headerlink" title="生产部署"></a>生产部署</h2><p>构建（<code>npm run build</code>）后，<code>build</code> 文件夹是静态网站文件。<br>您可以将其部署到任何 CDN 或静态文件服务器。</p><p>您还可以使用此存储库根目录下的 <code>Dockerfile</code> 构建一个 docker 镜像。<br>它运行构建并创建最小化的 nginx 镜像。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 构建</span></span><br><span class="line">docker build -t lrc-maker .</span><br><span class="line"><span class="comment"># 创建一个容器并在 8080 端口提供服务</span></span><br><span class="line">docker run -d -p 8080:80 lrc-maker</span><br></pre></td></tr></table></figure><h2 id="给这个项目点一个星星"><a href="#给这个项目点一个星星" class="headerlink" title="给这个项目点一个星星"></a>给这个项目点一个星星</h2><p>如果你喜欢这个<a href="https://github.com/magic-akari/lrc-maker">项目</a>，请点一个星星吧，同时分享这个项目来帮助更多的人。</p><p><img src="/../img/2025/05/akari-hide-wall.svg" alt="akari-hide-wall"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端开发 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 歌词 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>旧版博客网站入口</title>
+      <link href="/2025/05/20/archive-old-blogs/"/>
+      <url>/2025/05/20/archive-old-blogs/</url>
+      
+        <content type="html"><![CDATA[<h1 id="博客网站已更新。"><a href="#博客网站已更新。" class="headerlink" title="博客网站已更新。"></a>博客网站已更新。</h1><h2 id="点击此处前往旧版博客网站。"><a href="#点击此处前往旧版博客网站。" class="headerlink" title="点击此处前往旧版博客网站。"></a><a href="https://archive.nuist666.top/">点击此处</a>前往旧版博客网站。</h2><p><img src="/../img/2025/05/old-blogs.jpg" alt="旧版博客网站界面"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 大学生涯 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 旧版博客 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/2025/05/20/hello-world/"/>
+      <url>/2025/05/20/hello-world/</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 生活日常 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hello-world </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>
