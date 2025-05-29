@@ -16,3 +16,10 @@
         mask-image: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0), rgb(0, 0, 0), rgb(0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
     }
 }
+
+@media screen and (max-width: 768px) {
+    #anMusic-page meting-js .aplayer .aplayer-list.aplayer-list-hide {
+        bottom: 0% !important;
+        width: 100% !important;
+    }
+}
