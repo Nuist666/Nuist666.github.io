@@ -1,8 +1,19 @@
 #anMusic-page meting-js .aplayer .aplayer-body {
-    width: 100%;
+    width: 60%;
 }
 #anMusic-page meting-js .aplayer .aplayer-list {
     width: 40%;
+}
+
+@media screen and (max-width: 768px) {
+    #anMusic-page meting-js .aplayer .aplayer-body {
+        width: 100%!important;
+        position: fixed;
+        left: 0px;
+        right: 0px;
+        top: 100px;
+        margin: auto;
+    }
 }
 
 @media screen and (max-width: 768px) {
