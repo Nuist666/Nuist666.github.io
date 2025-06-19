@@ -6,7 +6,7 @@
   <link href="http://blog.nuist666.top/atom.xml" rel="self"/>
   
   <link href="http://blog.nuist666.top/"/>
-  <updated>2025-06-04T14:04:07.500Z</updated>
+  <updated>2025-06-19T10:36:02.040Z</updated>
   <id>http://blog.nuist666.top/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Github Education</title>
+    <link href="http://blog.nuist666.top/2025/06/19/github-education/"/>
+    <id>http://blog.nuist666.top/2025/06/19/github-education/</id>
+    <published>2025-06-19T09:00:00.000Z</published>
+    <updated>2025-06-19T10:36:02.040Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="GitHub-学生认证"><a href="#GitHub-学生认证" class="headerlink" title="GitHub 学生认证"></a>GitHub 学生认证</h1><p>申请 GitHub 的 Student Developer Pack 能够带来许多实实在在的好处，尤其对在校学生来说极具价值。大致查了一下有下面一些功能：</p><ul><li>Github会员：尤其是Github Copilot的免费使用权。</li><li>专业的桌面IDE：IntelliJ IDEA，PyCharm等。学生的免费订阅，每年更新一次。</li><li>GitHub学生的免费AWS Educate入门帐户，价值100美元。</li><li>Bootstrap Studio是一款功能强大的桌面应用程序，用于使用Bootstrap框架创建响应式网站。当您是学生时，Bootstrap Studio可获得免费许可证。</li><li>使用Canva，任何人都可以创建外观专业的图形和设计。具有数千个模板以及易于使用的编辑器。Canva Pro级别的12个月免费订阅。</li></ul><p>笔者在大学毕业前申请成功，下面是一些踩坑记录。<br><img src="/../img/2025/06/github-education.jpg" alt="GitHub Education"></p><h2 id="避免使用VPN及代理工具"><a href="#避免使用VPN及代理工具" class="headerlink" title="避免使用VPN及代理工具"></a>避免使用VPN及代理工具</h2><p>在认证学生身份时，需要提供位置信息，如果使用了VPN或者代理工具，可能会导致认证失败。<br><img src="/../img/2025/06/github-education-location.jpg" alt="location"><br>在认证的过程中可能会出现点击continue时没有反应或者continue之后位置显示不在学校，可以使用自定义地址的方法来解决。具体的步骤可以看<a href="https://blog.csdn.net/m0_74135032/article/details/142146443">这里</a>。</p><ul><li>先打开Github学生包申请网站</li><li>打开经纬度查询网站或者谷歌地图，查询自己学校位置的经纬度，记在备忘录中</li><li>在continue界面按下F12（Fn锁上的话按Fn+F12）打开开发者模式，找到右上角三个点</li><li>然后在弹出的菜单中找到更多工具——传感器（sensor）</li><li>在下面弹出界面找到位置，点开“禁止替换”的组合框，选择其他</li><li>最后把第一步查询的经纬度粘贴上</li><li>点击continue就可以进入啦</li></ul><h2 id="上传材料推荐选择文件上传而不是拍照上传"><a href="#上传材料推荐选择文件上传而不是拍照上传" class="headerlink" title="上传材料推荐选择文件上传而不是拍照上传"></a>上传材料推荐选择文件上传而不是拍照上传</h2><p>本人选择上传英文成绩单，选择文件上传，并提供英文成绩单的图片。拍照上传文字很模糊，本人拍照申请两次都没能通过。<br>注：如果没有文件上传的按钮，只有拍照上传的按钮，可能的原因有<a href="https://github.com/orgs/community/discussions/17762">很多</a>，其中一个原因是上一步定位不在学校，需要使用校园网访问，重新定位。<br><img src="/../img/2025/06/github-education-fail.jpg" alt="Github-fail"></p><p>下面是其他注意事项：</p><ul><li>如果使用您设备的摄像头提交学术机构文件，在使用设备摄像头时遇到问题，请在浏览器中允许申请网站访问摄像头。具体步骤取决于您使用的浏览器。您也可以尝试使用其他电脑或移动设备提交申请。</li><li>如果您是远程学习，学校提供的学术附属文件必须注明是远程学习。如果您认为您申请的学校包含不正确的信息（例如错误的邮箱域名）并影响您当前的申请，请在提交 GitHub Education 支持工单时选择“我选择的学校信息（例如域名或校园位置）不正确或不完整”选项。</li><li>您的证件中必须包含完整的学校名称，而不仅仅是学校徽标。您可以将多份证件放在一起。如果您的官方证件不是英文的，您可以将原件与英文翻译件放在一起拍照。</li><li>请确保您的学术关系文件中的姓氏与GitHub 账单信息中的姓氏完全一致。如果您只有一个法定姓名，请在 GitHub 账单信息中的名字和姓氏字段中都输入该姓名。</li><li>您的文件需要包含可证明当前学术关系的日期。对于使用非标准日历的国家&#x2F;地区，您可能需要将原始文件与已转换日期的文件放在一起拍摄。您可以在图像中包含多份文件，只要它们清晰易读即可。</li><li>如果您是远程学习，您的学术关系文件必须注明是线上学习。您必须配置浏览器和操作系统以允许位置访问。您不得使用 VPN。如果您认为我们关于您学校的信息不完整或不正确，例如缺少校区位置，请在提交 GitHub Education 支持工单时选择“我选择的学校信息不正确或不完整，例如域名或校区位置”。</li><li>请确保您的学术关系文件中包含的您的名字与您的GitHub 账单信息中显示的完全一致。您的姓名和昵称不接受其他变体。</li><li>您必须使用与学术关系文件中完全相同的全名完整填写GitHub 用户个人资料，否则可能无法通过验证。请勿使用姓名的变体或昵称。更新个人资料信息后，请退出并重新登录 GitHub，然后再重新申请。</li></ul><p><img src="/../img/2025/06/icons8-github.svg" alt="Github"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;GitHub-学生认证&quot;&gt;&lt;a href=&quot;#GitHub-学生认证&quot; class=&quot;headerlink&quot; title=&quot;GitHub 学生认证&quot;&gt;&lt;/a&gt;GitHub 学生认证&lt;/h1&gt;&lt;p&gt;申请 GitHub 的 Student Developer Pack</summary>
+      
+    
+    
+    
+    <category term="大学生涯" scheme="http://blog.nuist666.top/categories/%E5%A4%A7%E5%AD%A6%E7%94%9F%E6%B6%AF/"/>
+    
+    
+    <category term="Github" scheme="http://blog.nuist666.top/tags/Github/"/>
+    
+  </entry>
   
   <entry>
     <title>项目分享：Catime</title>
